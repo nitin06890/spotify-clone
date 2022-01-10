@@ -3,9 +3,11 @@ import {
   SearchIcon,
   LibraryIcon,
   PlusCircleIcon,
-  HeartIcon,
   RssIcon,
 } from '@heroicons/react/outline';
+import{
+  HeartIcon,
+} from '@heroicons/react/solid';
 
 import { signOut, useSession } from 'next-auth/react';
 import { useEffect, useState } from 'react';
@@ -18,6 +20,7 @@ function Sidebar() {
   const { data: session, status } = useSession();
   const [playlists, setPlaylist] = useState([]);
   const [playlistId, setPlaylistId] = useRecoilState(playlistIdState);
+  // console.log("you picked ",playlistId);
 
   useEffect(() => {
     if (spotifyApi.getAccessToken()) {
@@ -57,7 +60,7 @@ function Sidebar() {
           <p>Your Episodes</p>
         </button>
         <hr className="border-t-[0.1px] border-gray-900" />
-        {/* Playlists...  */}
+        {/* playlists.......*/}
         {playlists.map((playlist) => (
           <p
             key={playlist.id}

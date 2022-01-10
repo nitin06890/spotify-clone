@@ -80,8 +80,8 @@ function Center() {
           alt="album image"
         />
         <div>
-          <p>PLAYLIST</p>
-          <h1 className="text-2xl md:text-3xl xl:text-5xl">{playlist?.name}</h1>
+          <p className='font-semibold'>PLAYLIST</p>
+          <h1 className="text-2xl md:text-3xl xl:text-5xl font-bold">{playlist?.name}</h1>
         </div>
       </section>
 
